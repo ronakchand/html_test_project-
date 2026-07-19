@@ -1,0 +1,240 @@
+/* =========================================================
+   Portfolio Stylesheet — Ronak Chand
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+    --primary-dark: #0b132b;
+    --primary-navy: #1c2541;
+    --accent-teal: #3fd0d4;
+    --accent-purple: #5c6bc0;
+    --text-light: #e0e6f1;
+    --text-dark: #1c2541;
+    --bg-light: #f4f6fb;
+    --card-bg: #ffffff;
+    --shadow: 0 8px 24px rgba(11, 19, 43, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Header ---------- */
+header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-navy));
+    color: var(--text-light);
+    text-align: center;
+    padding: 3.5rem 1.5rem 2.5rem;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.05rem;
+    color: var(--accent-teal);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2.2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-teal);
+    color: var(--primary-dark);
+}
+
+/* ---------- Main Layout ---------- */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 2rem;
+}
+
+section h2 {
+    font-size: 1.7rem;
+    color: var(--primary-navy);
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid var(--accent-teal);
+}
+
+/* ---------- About ---------- */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+#about img {
+    border-radius: 50%;
+    border: 4px solid var(--accent-teal);
+    box-shadow: var(--shadow);
+}
+
+#about p {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* ---------- Skills — Grid ---------- */
+#skills dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+#skills dt {
+    font-weight: 700;
+    color: var(--primary-navy);
+    background-color: var(--card-bg);
+    padding: 1rem 1.2rem 0.3rem;
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow);
+}
+
+#skills dd {
+    background-color: var(--card-bg);
+    padding: 0 1.2rem 1.2rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: var(--shadow);
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- Projects ---------- */
+#projects article {
+    background-color: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--accent-purple);
+    transition: transform 0.3s ease;
+}
+
+#projects article:hover {
+    transform: translateY(-6px);
+}
+
+#projects h3 {
+    color: var(--primary-navy);
+    margin-bottom: 0.6rem;
+}
+
+#projects a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: var(--accent-purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#projects a:hover {
+    color: var(--accent-teal);
+    text-decoration: underline;
+}
+
+/* ---------- Contact ---------- */
+#contact {
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+    color: var(--text-light);
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+#contact h2 {
+    color: var(--text-light);
+    border-color: var(--accent-purple);
+}
+
+#contact a {
+    color: var(--accent-teal);
+    font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 768px) {
+    #skills dl {
+        grid-template-columns: 1fr;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    #about img {
+        width: 140px;
+        height: 140px;
+    }
+}
